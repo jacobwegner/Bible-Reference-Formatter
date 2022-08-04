@@ -3,6 +3,10 @@
 /* global require, module */
 
 const OsisFormatter = require("./osisFormatter");
+const osisToParatext = require("./osisToParatext");
+const paratextToOsis = require("./paratextToOsis");
+const osisToReadable = require("./osisToReadable");
+
 const osisFormatter = new OsisFormatter();
 let currentStyle = "";
 
@@ -1108,4 +1112,9 @@ function setStyle(style) {
 	currentStyle = style;
 }
 
-module.exports = formatOsis;
+module.exports = {
+	osisToParatext,
+	paratextToOsis,
+	osisToReadable
+}
+module.exports.default = formatOsis
