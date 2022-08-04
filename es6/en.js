@@ -1111,10 +1111,9 @@ function setStyle(style) {
 	osisFormatter.setOptions(styles[style].options);
 	currentStyle = style;
 }
-
-module.exports = {
+export {
 	osisToParatext,
 	paratextToOsis,
 	osisToReadable
 }
-module.exports.default = formatOsis
+export default formatOsis
